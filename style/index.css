@@ -1,0 +1,207 @@
+/*
+ ******************************************************
+ * 1. CONFIGURACIÓN GLOBAL Y FUENTES
+ ******************************************************
+ */
+
+/*
+ * Se recomienda importar estas fuentes de Google Fonts
+ * para la profesionalidad y legibilidad.
+ * Encabezados: Roboto Condensed (Estructurado y moderno)
+ * Texto: Open Sans (Altamente legible)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    /* Paleta de Confianza y Profesionalidad (Blues y Neutros) */
+    --color-primary: #004080; /* Azul Marino Oscuro (Fuerza y Confianza) */
+    --color-accent: #18A0FB; /* Azul Vibrante (Interacción) */
+    --color-background: #F4F7FC; /* Fondo Gris Claro / Azulado */
+    --color-text: #333333; /* Texto Principal Oscuro */
+    --color-border: #D3DCE6; /* Borde Neutro */
+    --color-success: #4CAF50; /* Éxito */
+    --color-error: #D32F2F; /* Error */
+
+    --font-heading: 'Roboto Condensed', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+/*
+ ******************************************************
+ * 2. ESTILOS DE LAYOUT Y CONTENEDORES
+ ******************************************************
+ */
+
+.App {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-card, .login-container {
+
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+
+
+}
+
+/*
+ ******************************************************
+ * 3. FORMULARIOS (LOGIN Y CREACIÓN DE BLOG)
+ ******************************************************
+ */
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(24, 160, 251, 0.3);
+}
+
+/*
+ ******************************************************
+ * 4. BOTONES
+ ******************************************************
+ */
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0080E6; /* Tono más oscuro del acento */
+}
+
+.btn-secundary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.btn-secundary:hover {
+    background-color: #002D59;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/*
+ ******************************************************
+ * 5. SECCIÓN DE BLOGS Y LISTADO
+ ******************************************************
+ */
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.user-info {
+    font-size: 16px;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.blog-list {
+    display: grid;
+    gap: 15px;
+}
+
+.blog-item {
+    background: white;
+    border: 1px solid var(--color-border);
+    padding: 15px;
+    border-radius: 6px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-item:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.blog-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.blog-author {
+    font-size: 14px;
+    color: #666666;
+    margin-left: 10px;
+}
+
