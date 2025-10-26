@@ -1,5 +1,5 @@
 import js from '@eslint/js'
-import globals from 'globals'
+import globals, { jest } from 'globals'
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
@@ -18,7 +18,7 @@ export default [
   
   // 2. CONFIGURACIÓN PRINCIPAL DE ARCHIVOS JS/JSX
   {
-    files: ['**/*.{js,jsx}'],
+    files:['**/*.{test,spec}.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest', // Usamos 'latest'
       sourceType: 'module',
