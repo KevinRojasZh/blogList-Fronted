@@ -22,11 +22,11 @@ const App = () => {
   },[])
 
   return (
-    <>
+    <div className='App'>
       {tokenUser === null && <Login  setUserLogin={setUserLogin}/>}
       {tokenUser !== null && <FormBlog userLogin={userLogin} tokenUser={tokenUser} allBlogs={allBlogs} setBlogs={setBlogs}/>}
       <ToastContainer position="top-center" autoClose={2000} />
-    </>
+    </div>
   )
 }
 

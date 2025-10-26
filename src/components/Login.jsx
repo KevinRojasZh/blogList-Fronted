@@ -43,9 +43,9 @@ const LoginForm = ({setUserLogin}) => {
     return(
       <section className='login-container'>
           <h1>Login</h1>
-          <form className='form-group' onSubmit={handelLogin}>
-            <input data-testid='username' onChange={changeUser} value={user} type="text" placeholder='User Name'/>
-            <input  data-testid='password' onChange={changePassword} value={password} type="password" placeholder='Password'/>
+          <form className='login-form' onSubmit={handelLogin}>
+              <input data-testid='username' onChange={changeUser} value={user} type="text" placeholder='User Name'/>
+              <input  data-testid='password' onChange={changePassword} value={password} type="password" placeholder='Password'/>
             <button className="btn btn-primary " type='submit'>Enviar</button>
           </form>
 
